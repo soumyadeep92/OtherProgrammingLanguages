@@ -1,0 +1,17 @@
+<%= form_tag do %>
+<%= collection.select(:titles,:id,Record.all,:id,:title) %>
+<p><%= submit_tag('Submit') %></p>
+<% end %>
+<% if (params.has_key?(:titles)) rec=Record.where("id =?",params[:titles][:id]) %>
+<table>
+    <tr>
+        <tr><th>ID #</th><th>Title</th><th>&nbsp;</th><th>Artist</th></tr>
+        <% record.each do |r| %>
+    </tr>
+    <tr>
+        <td><%= r.id %></td><td><%= r.title %></td>
+        <td style="padding:0px 15px 0px 25px;">BY</td><td><%= r.artist %></td>
+    </tr>
+    <% end %>
+</table>
+<% end %>

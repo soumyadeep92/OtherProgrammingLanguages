@@ -1,0 +1,13 @@
+<%
+@message=Message.new
+@message.user="Daniel"
+@message.message="Hello from "
+@message.save
+%>
+<h1><%=@message.message%><%=@message.user%></h1>
+
+<%
+@message2=Message.new(message:"Hello again from ",user:"Daniel")
+@message2.save
+%>
+<h1><%=@message2.message%><%=@message2.user%></h1>

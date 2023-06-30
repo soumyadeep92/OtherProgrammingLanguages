@@ -1,0 +1,6 @@
+<h1>Find Artists</h1>
+<%= form_tag("show",method:"get") do %>
+<%= label_tag(:q,"Search the top 100") %>
+<%= text_field_tag(:q) %>
+<%= submit_tag("Search") %>
+<% end %>

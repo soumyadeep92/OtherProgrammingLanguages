@@ -1,0 +1,9 @@
+<table>
+    <tr><th>ID #</th><th>Title</th><th>&nbsp;</th><th>Artist</th></tr>
+    <% @results.each do |record|%>
+    <tr>
+        <td><%=record.id%></td><td><%=record.title%></td><td style="padding:0px 15px 0px 25px;">BY</td><td><%=record.artist%></td>
+    </tr>
+        <% end %>
+</table>
+<p><%=link_to 'Search Top 100', 'search' %>&nbsp;&nbsp;<%=link_to 'Top 10', 'index' %></p>

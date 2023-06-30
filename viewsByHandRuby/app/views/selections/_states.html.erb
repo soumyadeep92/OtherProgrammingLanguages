@@ -1,0 +1,10 @@
+<% 
+def us_states
+    [
+        ['Alabana','AL'],
+        ['Alaska','AK']
+    ]
+end
+%>
+<%= label_tag(:state,'Select a state:') %>
+<%= select_tag :state, options_for_select(us_states) %>

@@ -1,0 +1,5 @@
+<% Selection Box %>
+<%= form_tag() do %>
+<%=select_tag :color, options_for_select([['Green',1],['Yellow',2],['Blue',3],['Red',4]])%>
+<p><%= render 'states' %></p>
+<%end%>

@@ -1,0 +1,15 @@
+<%
+r=Record.new(title:"Spamalot",artist:"Monty Python").save
+
+@myRecord=Record.find(2)
+%>
+<h1><%=@myRecord.title%> by <%=@myRecord.artist%></h1>
+<%
+@myRecord=Record.find(2).destroy
+%>
+<h1><%=@myRecord.title%> by <%=@myRecord.artist%></h1>
+<%
+r=Random.new
+myRecord=Record.find(r.rand(1..4))
+%>
+<h1><%=myRecord.title%> by <%=myRecord.artist%></h1>
